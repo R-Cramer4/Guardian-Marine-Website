@@ -27,6 +27,7 @@ body{
     flex-direction: column;
     min-height: 100vh;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    overflow-x: hidden;
 }
 
 
@@ -53,6 +54,7 @@ header{
 
 footer{
     position: relative;
+    display: block;
     height: 150px;
     margin-bottom: -8px;
     margin-left: -8px;
@@ -71,7 +73,8 @@ footer{
 .fixed{
     width: 50px;
     vertical-align: middle;
-    margin: 8px;
+    margin-left: 8px;
+    margin-right: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -104,6 +107,11 @@ h3{
 .logo{
     width: 50px;
     height: 50px;
+}
+.main-logo{
+    width: 50%;
+    height: 50%;
+    align-self: center;
 }
 
 
