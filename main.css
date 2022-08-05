@@ -29,13 +29,14 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    width: 110%;
+    width: 100vw;
     font-family: Georgia, 'Times New Roman', Times, serif;
     overflow-x: hidden;
 }
 
 header{
     height: 120px;
+    width: 100vw;
     position: relative;
     display: flex;
     justify-content: center;
@@ -44,13 +45,14 @@ header{
     margin-left: -8px;
     margin-right: -8px;
     background-color: var(--lightGrey);
+    box-shadow: 0 -50vh 0 50vh var(--lightGrey);
 }
 
 footer{
     position: relative;
     display: flex;
     height: 150px;
-    width: auto;
+    width: 100vw;
     margin-bottom: -8px;
     margin-left: -8px;
     margin-right: -8px;
@@ -132,6 +134,11 @@ footer{
     display: flex;
     flex: 1;
     align-items: center;
+    justify-content: center;
+}
+.mobile-wrapper{
+    width: 100vw;
+    display: flex;
     justify-content: center;
 }
 
