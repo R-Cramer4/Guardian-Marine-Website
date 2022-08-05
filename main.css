@@ -113,9 +113,8 @@ footer{
     flex: 1;
     display: flex;
 }
-
 .scrollspace{
-    width: 30%;
+    width: 16px;
 }
 
 .full{
