@@ -122,12 +122,6 @@ footer{
     width: 100%;
 }
 
-.centered{
-    text-align: center;
-    align-self: center;
-    display: flex;
-    justify-content: center;
-}
 .footerCent{
     width: 100vw;
     display: flex;
@@ -249,10 +243,8 @@ h3{
 
 /* lists */
 li{
-    list-style: none;
+    list-style: square;
     margin-bottom: 5px;
-    text-align: center;
-    align-self: center;
 }
 
 .list{
