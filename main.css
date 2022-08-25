@@ -94,6 +94,7 @@ footer{
 
 .label{
     width: 100px;
+    min-height: 25px;
     margin: 8px;
     vertical-align: middle;
     justify-content: right;
@@ -134,7 +135,9 @@ footer{
     display: flex;
     justify-content: center;
 }
-
+.mobile{
+    font-size: 30px;
+}
 
 /* links*/
 a:visited{
