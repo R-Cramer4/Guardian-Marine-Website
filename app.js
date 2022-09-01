@@ -14,7 +14,7 @@ switcher.addEventListener('click', function(){
     }
 });
 
-window.onresize = function(event) {
+/*window.onresize = function(event) {
     document.location.reload(true);
   }
   
@@ -28,3 +28,4 @@ window.onresize = function(event) {
   if (window.innerWidth < 960 && html_location !== "indexMobile.html") {
       window.location = "indexMobile.html";
   }
+  */
