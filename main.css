@@ -137,6 +137,7 @@ footer{
     vertical-align: middle;
     justify-content: right;
     align-items: stretch;
+    font-size: 20px;
 }
 
 .flex-item{
@@ -218,9 +219,10 @@ a:hover{
     background-color: #f1f1f1;
     left: auto;
     right: 0px;
-    max-width: 100px;
+    max-width: 125px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    transform: translateY(64px);
 }
 
 .dropdown-content a {
