@@ -1,6 +1,8 @@
 'use strict';
 
-const switcher = document.querySelector('.btn');
+/*const switcher = document.querySelector('.btn');
+
+alert("Loaded");
 
 switcher.addEventListener('click', function(){
     document.body.classList.toggle('light-theme');
@@ -13,6 +15,17 @@ switcher.addEventListener('click', function(){
         this.textContent = "Light";
     }
 });
+*/
+
+function btnToggle(){
+    document.getElementById("content").style.display = "block";
+}
+
+window.onclick = function(event){
+    if(!event.target.matches(".servicebtn")){
+        document.getElementById("content").style.display = "none";
+    }
+}
 
 /*window.onresize = function(event) {
     document.location.reload(true);
