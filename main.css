@@ -138,11 +138,12 @@ footer{
     font-weight: normal;
 }
 .serviceLabel{
-    display: block;
-    min-height: 25px;
-    margin: 8px;
+    display: flex;
+    margin-left: 16px;
     font-size: 20px;
-
+    margin-top: 8px;
+    border: 1px solid #000;
+    line-height: 2.5;
 }
 .flex-item{
     flex: 1;
@@ -273,7 +274,27 @@ a:hover{
     display: inline-block;
 }
 
-.serviceDrop:hover .service-content{display: block;}
+.serviceDrop:hover .service-content{display: flex; flex-direction: row;}
+.img-container{
+    flex: 1;
+    min-height: 150px;
+}
+.links{
+    display: inline-block;
+    justify-content: center;
+    align-content: flex-start;
+    width: auto;
+    margin: 0;
+}
+.serviceLabel{flex: 1; text-align: center;}
+
+.img-display{
+    height: auto;
+    width: 0px;
+    transition: width .1s;
+    transition-timing-function: ease-in-out;
+}
+.links:hover + .img-container .img-display{width: 25%;}
 
 
 /* headers */

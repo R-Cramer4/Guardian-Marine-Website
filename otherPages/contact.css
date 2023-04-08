@@ -1,0 +1,62 @@
+.form-group, .name-group{
+    width: 100%;
+    margin-top: 10px;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.name-group{
+    flex-direction: row;
+}
+#firstName{
+    margin-right: 5px;
+}
+.formContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.form-group input, .form-group textarea, .name-group input{
+    font-size: 24px;
+    padding: 10px;
+    border: 1px solid rgba(100, 100, 128, .6);
+    border-radius: 5px;
+    background-color: #fbfcff;
+    margin-top: 5px;
+    font-family: inherit;
+}
+.name{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: flex-start;
+}
+textarea{
+    resize: none;
+}
+button[type="submit"]{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 25%;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(100, 100, 128, .6);
+    background-color: rgba(240, 240, 245, .999);
+    font-family: inherit;
+    cursor: pointer;
+    transition: .3s background-color;
+}
+button[type="submit"]:hover{
+    background-color: rgba(140, 140, 145, .599);
+}
+.success{
+    display: none;
+}
+.errorMessage{
+    margin-top: 5px;
+    display: none;
+    font-size: 16px;
+    color: red;
+}

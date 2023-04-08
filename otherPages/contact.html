@@ -7,6 +7,7 @@
     <title>Guardian Marine CT</title>
     <link rel="icon" type="image/x-icon" href="../Photos/favicon.ico">
     <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <header class="light-theme">
         
@@ -25,18 +26,12 @@
                 <div class="dropdown-content">
                     <a href="../otherPages/about.html" class="label">About</a>
                     <a href="../otherPages/contact.html" class="label">Contact</a>
+                    <a href="../otherPages/services.html" class="label">Services</a>
                 </div>
             </div>
         </div>
         <div class="computer">
-            <button id="servicebtn" class="servicebtn" onclick="btnToggle()">Services</button>
-            <div id="content" class="service-content">
-                <a href="../otherPages/services.html" class="serviceLabel">Current Work</a>
-                <a href="../otherPages/services.html" class="serviceLabel">Past Projects</a>
-                <a href="../otherPages/services.html" class="serviceLabel">Electrical</a>
-                <a href="../otherPages/services.html" class="serviceLabel">Solar</a>
-                <a href="../otherPages/contact.html" class="serviceLabel">Contact</a>
-            </div>
+            <a href="../otherPages/services.html" class="label">Services</a>
             <a href="../otherPages/about.html" class="label">About</a>
             <a href="../otherPages/contact.html" class="label">Contact</a>
         </div>
@@ -44,12 +39,62 @@
     </div>
 </header>
 <body class = "light-theme">
+    <h3>Work Form</h3>
+    <div class="formContainer">
+        <form id="work-form">            
+            <div class="name-group">
+                <div class="name">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName">
+                    <div class="errorMessage" id="emptyFirstName">This is a required field</div>
+                </div>
+                <div class="name">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName">
+                    <div class="errorMessage" id="emptyLastName">This is a required field</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email">
+                <div class="errorMessage" id="emptyEmail">This is a required field</div>
+                <div class="errorMessage" id="invalidEmail">Please enter a valid email</div>
+            </div>
+            <div class="form-group">
+                <label for="phoneNumber">Phone Number</label>
+                <input id="phoneNumber" onInput="this.value = formatPhone(this.value, this)">
+                <div class="errorMessage" id="emptyPhoneNumber">This is a required field</div>
+                <div class="errorMessage" id="invalidPhoneNumber">Please enter a valid phone number</div>
+            </div>
+            <div class="form-group">
+                <label for="boatType">Make and Model</label>
+                <input type="text" name="boatType" id="boatType">
+                <div class="errorMessage" id="emptyBoatType">This is a required field</div>
+            </div>
+            <div class="form-group">
+                <label for="location">Boat Location</label>
+                <input type="text" name="location" id="location">
+                <div class="errorMessage" id="emptyLocation">This is a required field</div>
+            </div>
+            <div class="form-group">
+                <label for="workRequest">Work Request</label>
+                <textarea name="workReq" id="workReq" cols="30" rows="10"></textarea>
+            </div>
+            <button type="submit" id="submit">Submit</button>
+            <div class="errorMessage" id="needToWait">You need to wait 1 minute inbetween submissions</div>
+        </form>
+        <div class="success" id="success">
+            <h2>Form Submitted!</h2>
+        </div>
+    </div>
+    <!--
     <h3>Contact Page Under Construction</h3>
 
     <img src="../Photos/Logo-main.png" alt="logo" class="main-logo">
     
     <div class="spacer"></div>
-    <script src="app.js"></script>
+    -->
+    <script src="../app.js"></script>
     <noscript>You need to enable JavaScript to view the full site</noscript>
 </body>
 <footer>
