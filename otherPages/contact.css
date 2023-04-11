@@ -61,6 +61,7 @@ textarea{
     resize: none;
 }
 button[type="submit"]{
+    color: black;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 25%;
