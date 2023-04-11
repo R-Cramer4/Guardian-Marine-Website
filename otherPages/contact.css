@@ -5,19 +5,12 @@
 .mobile input, .mobile textarea{
     width: 80%;
 }
-.moble .form-group{
-    width: 100vw;
-    margin-right: 10px;
-    margin-left: 10px;
-}
 .buttonHolder{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-
-
 .computer{
     justify-content: center;
 }
@@ -61,7 +54,6 @@ textarea{
     resize: none;
 }
 button[type="submit"]{
-    color: black;
     margin-top: 10px;
     margin-bottom: 10px;
     width: 25%;

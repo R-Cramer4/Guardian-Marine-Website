@@ -356,3 +356,7 @@ li{
 .list{
     list-style: square;
 }
+.returnHome{
+    display: flex;
+    justify-content: center;
+}

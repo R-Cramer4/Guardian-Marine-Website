@@ -70,7 +70,7 @@ function submitForm(form, event){
                 document.getElementById("success").style.display = "block";
                 console.log("Success");
                 timeOfSubmit = new Date();
-                alert("Form was successfully submitted");
+                window.location.href = "submitSuccess.html";
             }else{
                 console.log("An Error Occured");
                 console.log(xhr.statusText);
@@ -134,6 +134,7 @@ function validateForm(form){
     return isValid;
 }
 var timeOfSubmit = new Date();
+timeOfSubmit.setFullYear(2000);
 
 function enoughTimeHasPassed(){
     let now = new Date();
