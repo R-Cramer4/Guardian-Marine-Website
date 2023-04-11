@@ -29,12 +29,30 @@ const form = {
     workRequest: document.getElementById("workReq"),
     submit: document.getElementById("submit")
 };
+const mobileForm = {
+    form: document.getElementById("work-form-mobile"),
+    firstName: document.getElementById("firstNameMobile"),
+    lastName: document.getElementById("lastNameMobile"),
+    email: document.getElementById("emailMobile"),
+    phoneNumber: document.getElementById("phoneNumberMobile"),
+    boatType: document.getElementById("boatTypeMobile"),
+    location: document.getElementById("locationMobile"),
+    workRequest: document.getElementById("workReqMobile"),
+    submit: document.getElementById("submit")
+}
 
+mobileForm.form.onsubmit = function(event){
+    submitForm(mobileForm, event);
+}
 
 form.form.onsubmit = function(event){
+    submitForm(form, event);
+}
+
+function submitForm(form, event){
     event.preventDefault();
     
-    if(validateForm() && enoughTimeHasPassed()){
+    if(validateForm(form) && enoughTimeHasPassed()){
         const xhr = new XMLHttpRequest();
         var formData = new FormData();
         formData.append("firstName", form.firstName.value);
@@ -61,7 +79,9 @@ form.form.onsubmit = function(event){
     }
 }
 
-function validateForm(){
+
+
+function validateForm(form){
     let isValid = true;
     if(form.firstName.value == ""){
         isValid = false;
@@ -84,6 +104,7 @@ function validateForm(){
         document.getElementById("invalidEmail").style.display = "block";
     }else{
         document.getElementById("invalidEmail").style.display = "none";
+        document.getElementById("emptyEmail").style.display = "none";
     }
     if(form.phoneNumber.value == ""){
         isValid = false;
@@ -94,6 +115,7 @@ function validateForm(){
         document.getElementById("invalidPhoneNumber").style.display = "block";
     }else{
         document.getElementById("invalidPhoneNumber").style.display = "none";
+        document.getElementById("emptyPhoneNumber").style.display = "none";
     }
     if(form.boatType.value == ""){
         isValid = false;

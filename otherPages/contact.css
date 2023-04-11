@@ -1,5 +1,30 @@
+.mobile .form-group{
+    align-items: center;
+    width: 100vw;
+}
+.mobile input, .mobile textarea{
+    width: 80%;
+}
+.moble .form-group{
+    width: 100vw;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.buttonHolder{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.computer{
+    justify-content: center;
+}
+.computer #firstName{
+    margin-right: 5px;
+}
 .form-group, .name-group{
-    width: 100%;
     margin-top: 10px;
     font-size: 20px;
     display: flex;
@@ -8,14 +33,14 @@
 .name-group{
     flex-direction: row;
 }
-#firstName{
-    margin-right: 5px;
-}
 .formContainer{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.mobile button[type="submit"]{
+    width: 138.5px;
 }
 .form-group input, .form-group textarea, .name-group input{
     font-size: 24px;

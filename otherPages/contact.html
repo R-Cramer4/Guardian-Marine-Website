@@ -40,53 +40,105 @@
 </header>
 <body class = "light-theme">
     <h3>Work Form</h3>
-    <div class="formContainer">
-        <form id="work-form">            
-            <div class="name-group">
-                <div class="name">
+    <div class="mobile">
+        <div class="formContainer">
+            <form id="work-form-mobile">
+                <div class="form-group">
                     <label for="firstName">First Name</label>
-                    <input type="text" name="firstName" id="firstName">
+                    <input type="text" name="firstName" id="firstNameMobile">
                     <div class="errorMessage" id="emptyFirstName">This is a required field</div>
                 </div>
-                <div class="name">
+                <div class="form-group">
                     <label for="lastName">Last Name</label>
-                    <input type="text" name="lastName" id="lastName">
+                    <input type="text" name="lastName" id="lastNameMobile">
                     <div class="errorMessage" id="emptyLastName">This is a required field</div>
                 </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="emailMobile">
+                    <div class="errorMessage" id="emptyEmail">This is a required field</div>
+                    <div class="errorMessage" id="invalidEmail">Please enter a valid email</div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumberMobile" onInput="this.value = formatPhone(this.value, this)">
+                    <div class="errorMessage" id="emptyPhoneNumber">This is a required field</div>
+                    <div class="errorMessage" id="invalidPhoneNumber">Please enter a valid phone number</div>
+                </div>
+                <div class="form-group">
+                    <label for="boatType">Make and Model</label>
+                    <input type="text" name="boatType" id="boatTypeMobile">
+                    <div class="errorMessage" id="emptyBoatType">This is a required field</div>
+                </div>
+                <div class="form-group">
+                    <label for="location">Boat Location</label>
+                    <input type="text" name="location" id="locationMobile">
+                    <div class="errorMessage" id="emptyLocation">This is a required field</div>
+                </div>
+                <div class="form-group">
+                    <label for="workRequest">Work Request</label>
+                    <textarea name="workReq" id="workReqMobile" cols="30" rows="10"></textarea>
+                </div>
+                <div class="buttonHolder">
+                    <button type="submit" id="submit">Submit</button>
+                    <div class="errorMessage" id="needToWait">You need to wait 1 minute in between submissions</div>
+                </div>
+            </form>
+            <div class="success" id="success">
+                <h2>Form Submitted!</h2>
             </div>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email">
-                <div class="errorMessage" id="emptyEmail">This is a required field</div>
-                <div class="errorMessage" id="invalidEmail">Please enter a valid email</div>
-            </div>
-            <div class="form-group">
-                <label for="phoneNumber">Phone Number</label>
-                <input id="phoneNumber" onInput="this.value = formatPhone(this.value, this)">
-                <div class="errorMessage" id="emptyPhoneNumber">This is a required field</div>
-                <div class="errorMessage" id="invalidPhoneNumber">Please enter a valid phone number</div>
-            </div>
-            <div class="form-group">
-                <label for="boatType">Make and Model</label>
-                <input type="text" name="boatType" id="boatType">
-                <div class="errorMessage" id="emptyBoatType">This is a required field</div>
-            </div>
-            <div class="form-group">
-                <label for="location">Boat Location</label>
-                <input type="text" name="location" id="location">
-                <div class="errorMessage" id="emptyLocation">This is a required field</div>
-            </div>
-            <div class="form-group">
-                <label for="workRequest">Work Request</label>
-                <textarea name="workReq" id="workReq" cols="30" rows="10"></textarea>
-            </div>
-            <button type="submit" id="submit">Submit</button>
-            <div class="errorMessage" id="needToWait">You need to wait 1 minute inbetween submissions</div>
-        </form>
-        <div class="success" id="success">
-            <h2>Form Submitted!</h2>
         </div>
     </div>
+    <div class="computer">
+        <div class="formContainer">
+            <form id="work-form">
+                <div class="name-group">
+                    <div class="name">
+                        <label for="firstName">First Name</label>
+                        <input type="text" name="firstName" id="firstName">
+                        <div class="errorMessage" id="emptyFirstName">This is a required field</div>
+                    </div>
+                    <div class="name">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName">
+                        <div class="errorMessage" id="emptyLastName">This is a required field</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email">
+                    <div class="errorMessage" id="emptyEmail">This is a required field</div>
+                    <div class="errorMessage" id="invalidEmail">Please enter a valid email</div>
+                </div>
+                <div class="form-group">
+                    <label for="phoneNumber">Phone Number</label>
+                    <input id="phoneNumber" onInput="this.value = formatPhone(this.value, this)">
+                    <div class="errorMessage" id="emptyPhoneNumber">This is a required field</div>
+                    <div class="errorMessage" id="invalidPhoneNumber">Please enter a valid phone number</div>
+                </div>
+                <div class="form-group">
+                    <label for="boatType">Make and Model</label>
+                    <input type="text" name="boatType" id="boatType">
+                    <div class="errorMessage" id="emptyBoatType">This is a required field</div>
+                </div>
+                <div class="form-group">
+                    <label for="location">Boat Location</label>
+                    <input type="text" name="location" id="location">
+                    <div class="errorMessage" id="emptyLocation">This is a required field</div>
+                </div>
+                <div class="form-group">
+                    <label for="workRequest">Work Request</label>
+                    <textarea name="workReq" id="workReq" cols="30" rows="10"></textarea>
+                </div>
+                <button type="submit" id="submit">Submit</button>
+                <div class="errorMessage" id="needToWait">You need to wait 1 minute in between submissions</div>
+            </form>
+            <div class="success" id="success">
+                <h2>Form Submitted!</h2>
+            </div>
+        </div>
+    </div>
+    
     <!--
     <h3>Contact Page Under Construction</h3>
 
