@@ -70,6 +70,7 @@ function submitForm(form, event){
                 document.getElementById("success").style.display = "block";
                 console.log("Success");
                 timeOfSubmit = new Date();
+                alert("Form was successfully submitted");
             }else{
                 console.log("An Error Occured");
                 console.log(xhr.statusText);
