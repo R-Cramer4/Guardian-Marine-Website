@@ -353,9 +353,6 @@ li{
     font-size: 18px;
 }
 
-.list{
-    list-style: square;
-}
 .returnHome{
     display: flex;
     justify-content: center;

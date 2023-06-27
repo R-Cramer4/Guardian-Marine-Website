@@ -1,0 +1,13 @@
+.spacer-about{
+    height: 100px;
+}
+
+/* LIST */
+.list{
+    display: flex;
+    justify-content: center;
+}
+li.about{
+    list-style: disc;
+    font-size: 25px;
+}
