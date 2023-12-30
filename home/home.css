@@ -1,0 +1,37 @@
+
+
+.home{
+    background: url("../Photos/marina-background.jpg") ;
+    background-size: 100%;
+    box-shadow: inset 0 0 0 1000px #ffffff9a;
+    background-position-y: bottom;
+    height: 650px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.slogan{
+    margin: 20px;
+}
+.sidebar{
+    background-color: #182c50;
+    color: #fff;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.display-logo{
+    width: 50%;
+    height: 50%;
+}
+.name-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
