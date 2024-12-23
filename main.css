@@ -66,6 +66,10 @@ footer{
     background-color: var(--lightGrey);
     box-shadow: 0 50vh 0 50vh var(--lightGrey);
 }
+.ft-left, .ft-right{
+    display: flex;
+    flex: 1;
+}
 
 
 /*button*/
