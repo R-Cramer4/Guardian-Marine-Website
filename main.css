@@ -36,17 +36,23 @@ body{
 }
 
 header{
-    height: 120px;
+    /*height: 120px;*/
     width: 100vw;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -8px;
-    margin-left: -8px;
-    margin-right: -8px;
     background-color: var(--lightGrey);
     box-shadow: 0 -50vh 0 50vh var(--lightGrey);
+    flex-direction: column;
+}
+.main-header{
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
 }
 
 footer{
@@ -132,9 +138,8 @@ footer{
 }
 
 .label{
-    width: 100px;
-    min-height: 25px;
-    margin: 8px;
+    min-height: 30px;
+    margin: 16px;
     font-size: 20px;
     font-weight: normal;
 }
@@ -157,14 +162,37 @@ footer{
     justify-content: right;
 }
 
-.left, .right{
+.left{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 0;
+    padding: 5px;
+}
+.right{
     flex: 1;
     display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .top-right{
     flex: 1;
     display: flex;
+    justify-content: center;
+}
+.links{
+    margin: 5px;
+    padding: 5px;
+}
+.phone-number{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    padding-right: 30px;
     justify-content: right;
+    background-color: black;
+    color: white;
 }
 .full{
     margin: 8px;
@@ -320,13 +348,20 @@ h3{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 200;
 }
+h4{
+    margin: 8px;
+    text-align: center;
+    align-self: center;
+}
+h5{
+    margin: 5px;
+}
 
 
 /* photos */
 .logo{
-    width: 50px;
-    height: 50px;
-    margin: 16px;
+    width: 80%;
+    margin: 8px;
 }
 
 .main-logo{
