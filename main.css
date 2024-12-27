@@ -119,6 +119,9 @@ footer{
         display: flex;
         width: 100vw;
     }
+    .top-right{
+        justify-content: center;
+    }
     .right{
         justify-content: right;
     }
@@ -183,7 +186,6 @@ footer{
 .top-right{
     flex: 1;
     display: flex;
-    justify-content: center;
 }
 .links{
     margin: 5px;
