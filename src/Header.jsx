@@ -32,7 +32,7 @@ function Header({handleClick}){
         <header className='light-theme'>
             <div className="phone-number">
                 <a href='tel:203-214-3282'>
-                    <h5>203-214-3282</h5>
+                    <h5 className="phone-number-text">(203) 214-3282</h5>
                 </a>
             </div>
             <div className="main-header">
@@ -40,7 +40,7 @@ function Header({handleClick}){
                     <a onClick={() => handleClick('home')}>
                         <img src="./src/assets/Logo.png" alt="Logo" className = "logo"/>
                     </a>
-                    <h4>Guardian Marine</h4>
+                    <h4 className='brand-text'>Guardian Marine</h4>
                 </div>
 
                 <div className="top-right">

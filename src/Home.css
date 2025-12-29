@@ -59,18 +59,31 @@ div.p-computer img.photos{
 
 .companies-c, .companies-m{
     display: flex;
+    width: max-content;
+    
+    /*
     justify-content: space-evenly;
     align-content: center;
     margin-top: 20px;
+    */
 }
 .companies-m{
+    /*
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    */
+}
+.card-holder {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
 }
 .home-logos{
-    height: 25vh;
+    height: 20vh;
     margin: 10px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .container{
