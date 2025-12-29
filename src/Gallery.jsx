@@ -36,15 +36,17 @@ export default function Gallery(){
         './src/assets/Photos/Gallery/IMG_3125.jpg',
         './src/assets/Photos/Gallery/IMG_3812.jpg',
         './src/assets/Photos/Gallery/IMG_5623.jpg',
-        './src/assets/Photos/Gallery/IMG_6915.jpg',
         './src/assets/Photos/Gallery/IMG_7089.jpg',
         './src/assets/Photos/Gallery/IMG_7143.jpg',
-        './src/assets/Photos/Gallery/IMG_7203.jpg',
         './src/assets/Photos/Gallery/IMG_7720.jpg',
         './src/assets/Photos/Gallery/IMG_7766.jpg',
         './src/assets/Photos/Gallery/IMG_7846.jpg',
         './src/assets/Photos/Gallery/IMG_7855.jpg',
     ];
+    const bad_images = [
+        './src/assets/Photos/Gallery/IMG_7203.jpg',
+        './src/assets/Photos/Gallery/IMG_6915.jpg',
+    ]
     return (
         <div>
             <div className='gall-row'>

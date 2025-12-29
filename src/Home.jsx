@@ -2,6 +2,55 @@ import './index.css'
 import './Home.css'
 import {useState, useEffect, useRef} from 'react';
 
+function ServiceCards({handleClick}) {
+    const [animated, setAnimated] = useState(-1);
+     // when click go to service page with things expanded
+    // with photos scrolling through or fading between photos
+    return (
+        <div className='service-cards'>
+            <div>
+                <div
+                onClick={() => setAnimated(0)}
+                onAnimationEnd={() => {
+                    setAnimated(-1);
+                    handleClick('services', 0)
+                }}
+                className={ (animated == 0 ? 'service-animated ': '') + 'service-card'}>
+                    <h3 className={(animated == 0 ? 'text-animated ' : '') + 'service-text'}>Electrical</h3>
+                </div>
+                <div
+                onClick={() => setAnimated(1)}
+                onAnimationEnd={() => {
+                    setAnimated(-1);
+                    handleClick('services', 2)
+                }}
+                className={ (animated == 1 ? 'service-animated ': '') + 'service-card'}>
+                    <h3 className={(animated == 1 ? 'text-animated ' : '') + 'service-text'}>System<br/>Integration</h3>
+                </div>
+            </div>
+            <div>
+                <div
+                onClick={() => setAnimated(2)}
+                onAnimationEnd={() => {
+                    setAnimated(-1);
+                    handleClick('services', 1)
+                }}
+                className={ (animated == 2 ? 'service-animated ': '') + 'service-card'}>
+                    <h3 className={(animated == 2 ? 'text-animated ' : '') + 'service-text'}>Electronics</h3>
+                </div>
+                <div
+                onClick={() => setAnimated(3)}
+                onAnimationEnd={() => {
+                    setAnimated(-1);
+                    handleClick('services', 3)
+                }}
+                className={ (animated == 3 ? 'service-animated ': '') + 'service-card'}>
+                    <h3 className={(animated == 3 ? 'text-animated ' : '') + 'service-text'}>Energy<br/>Systems</h3>
+                </div>
+            </div>
+        </div>
+    )
+}
 function Card({ image, imageName, link, animationSpeed }) {
     return (
         <div
@@ -135,7 +184,7 @@ function getCur(ind, next){
     return classes;
 }
 
-export default function Home(){
+export default function Home({handleClick}){
     const images = [
         './src/assets/Photos/Gallery/BatteryBefore.jpg',
         './src/assets/Photos/Gallery/BatteryAfter.jpg',
@@ -208,6 +257,8 @@ export default function Home(){
         <main className="light-theme">
 
             <FadeImages images={images}/>
+
+            <ServiceCards handleClick={handleClick}/>
 
             <ScrollingBrands brands={brands}/>
         </main>

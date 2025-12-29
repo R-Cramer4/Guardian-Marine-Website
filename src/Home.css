@@ -126,3 +126,54 @@ div.p-computer img.photos{
 .spacer{
     height: 100px;
 }
+
+.service-cards {
+    background-color: white;
+    background-image:
+        linear-gradient(180deg, 
+        rgba(var(--homeFade), 1) 0%, 
+        rgba(0, 0, 0, 0) 20%, 
+        rgba(0, 0, 0, 0) 100%);
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.service-card {
+    width: 500px;
+    height: 500px;
+    background-image: url("./src/assets/Photos/ships_wheel.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.service-animated {
+    animation: spin-background 1000ms linear;
+}
+.text-animated {
+    animation: spin-text 1000ms linear;
+}
+@keyframes spin-background {
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+@keyframes spin-text {
+    0%{ transform: rotate(360deg); }
+    100%{ transform: rotate(0deg); }
+}
+.more-info {
+    background-color: #2a4675;
+    color: white;
+    border-radius: 3px;
+    font-size: 18px;
+    width: 45%;
+    padding: 5px;
+}
+.service-text {
+    width: 50%;
+    font-size: 12px;
+}

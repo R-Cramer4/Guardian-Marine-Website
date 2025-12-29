@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Header from './Header.jsx'
 import Home from './Home.jsx'
@@ -12,14 +12,19 @@ import Brands from './Brands.jsx'
 
 function App() {
     const [page, setPage] = useState('home');
-    function handleClick(newPage){
-        setPage(newPage)
+    const [serviceIndex, setServiceIndex] = useState(-1);
+    function handleClick(newPage, index = -1){
+        setPage(newPage);
+        setServiceIndex(index);
     }
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [page]);
     return (
         <>
             <Header handleClick={handleClick} isHome={page == 'home'}/>
-            {page == 'home' && <Home />}
-            {page == 'services' && <Service />}
+            {page == 'home' && <Home handleClick={handleClick}/>}
+            {page == 'services' && <Service index={serviceIndex}/>}
             {page == 'about' && <About />}
             {page == 'contact' && <Contact handleClick={handleClick} />}
             {page == 'gallery' && <Gallery />}

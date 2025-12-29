@@ -7,7 +7,7 @@ function MissionStatement({isHome}) {
     return (
         <div className='mission-statement'>
             <h3 className='mission-text'>
-                I like boats
+                Our mission is to provide exceptional marine electrical, electronic, and systems solutions grounded in ABYC and NMEA standards.
             </h3>
         </div>
     )

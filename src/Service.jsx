@@ -23,8 +23,11 @@ function DropContent({text, show}){
 }
 
 
-export default function Service(){
-    let initState = [-1, -1, -1, -1]
+export default function Service({index}){
+    let initState = [-1, -1, -1, -1];
+    if (index != -1) {
+        initState[index] = index;
+    }
     const [show, setShow] = useState(initState);
     function clickE(index){
         const nextState = show.map((c, i) => {
