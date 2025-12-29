@@ -96,7 +96,7 @@ function FadeImages({images}){
                         return newI;
                     }
                 })
-            }, 2000);
+            }, 3000);
         }, 6000);
         return () => clearInterval(interval);
     });
@@ -184,7 +184,7 @@ export default function Home(){
             link: "https://www.raymarine.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/Sleipner Logo.png",
+            image: "./src/assets/Photos/Brands/SleipnerLogo.svg",
             name: "Sleipner logo",
             link: "https://www.sleipnergroup.com/"
         },
@@ -209,9 +209,6 @@ export default function Home(){
 
             <FadeImages images={images}/>
 
-            <div className='slogan-banner'>
-                <h2 className='slogan'>Marine systems, customized to fit your needs</h2>
-            </div>
             <ScrollingBrands brands={brands}/>
         </main>
     )

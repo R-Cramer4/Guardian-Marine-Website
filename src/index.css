@@ -3,6 +3,7 @@
     --black: #000000;
     --grey: #434750;
     --lightGrey: #6C717C;
+    --homeFade: 89, 171, 240;
 }
 
 
@@ -39,6 +40,7 @@ main{
 }
 
 header{
+    font-family: Georgia, 'Times New Roman', Times, serif;
     /*height: 120px;*/
     width: 100vw;
     position: relative;

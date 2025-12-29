@@ -38,7 +38,9 @@ div.p-computer img.photos{
     align-items: center;
     position: relative;
     height: 500px;
-    margin-top: 5px;
+    background-color: rgb(var(--homeFade));
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 .p-mobile{
     flex-direction: column;
@@ -52,7 +54,7 @@ div.p-computer img.photos{
     font-family: Arial, Helvetica, sans-serif;
 }
 .slogan-banner{
-    margin-top: 5px;
+    min-height: 50px;
     background-color: var(--lightGrey);
     color: black;
 }
@@ -78,6 +80,9 @@ div.p-computer img.photos{
     overflow: hidden;
     width: 100%;
     display: flex;
+}
+.brand-card {
+    padding-left: 15px;
 }
 .home-logos{
     height: 20vh;

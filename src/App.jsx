@@ -17,7 +17,7 @@ function App() {
     }
     return (
         <>
-            <Header handleClick={handleClick}/>
+            <Header handleClick={handleClick} isHome={page == 'home'}/>
             {page == 'home' && <Home />}
             {page == 'services' && <Service />}
             {page == 'about' && <About />}

@@ -1,4 +1,3 @@
-
 /* allignment, spacing*/
 @media screen and (max-width: 750px) {
     /* do small screen stuff*/
@@ -46,6 +45,32 @@
         font-size: 50px;
     }
 }
+.header-home {
+    background-image:
+        linear-gradient(180deg, 
+        rgba(var(--homeFade), 0) 0%, 
+        rgba(var(--homeFade), 0.05) 80%, 
+        rgba(var(--homeFade), 1) 100%),
+        url("./src/assets/Photos/main_img.png");
+    background-size: cover;
+    height: 120vh;
+}
+.phone-number{
+    display: flex;
+    flex: 1;
+    width: 90%;
+    height: 50px;
+    padding-right: 10%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    justify-content: right;
+    background-color: black;
+    color: white;
+}
+.phone-number-text {
+    font-size: 18px;
+    height: 18px;
+}
 .right{
     flex: 1;
     display: flex;
@@ -59,21 +84,6 @@
     flex-direction: column;
     flex-basis: 0;
     padding: 10px;
-    margin-left: 10px;
-}
-.phone-number{
-    display: flex;
-    flex: 1;
-    width: 90%;
-    padding-right: 10%;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    justify-content: right;
-    background-color: black;
-    color: white;
-}
-.phone-number-text {
-    font-size: 18px;
 }
 .brand-text {
     font-size: 20px;
@@ -92,9 +102,22 @@
     align-items: center;
     flex-grow: 1;
     width: 100%;
+    height: 90%;
+}
+.header-spacer {
+    height: 100vh;
     box-shadow: 0 0px 2px var(--lightGrey);
 }
 
+.mission-statement {
+    background-color: black;
+    color: white;
+    width: 75vw;
+    border-radius: 10px;
+}
+.mission-text {
+    font-size: 40px;
+}
 
 /* Dropdown stuff*/
 .dropbtn{

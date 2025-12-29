@@ -2,6 +2,16 @@ import { useState } from 'react';
 import './index.css'
 import './Header.css'
 
+function MissionStatement({isHome}) {
+    if (!isHome) return;
+    return (
+        <div className='mission-statement'>
+            <h3 className='mission-text'>
+                I like boats
+            </h3>
+        </div>
+    )
+}
 
 function DropButton({changeSite}){
     const [active, setActive] = useState(false);
@@ -27,9 +37,9 @@ function DropButton({changeSite}){
 }
 
 
-function Header({handleClick}){
+function Header({handleClick, isHome}){
     return(
-        <header className='light-theme'>
+        <header className={(isHome ? 'header-home ' : '') + 'light-theme'}>
             <div className="phone-number">
                 <a href='tel:203-214-3282'>
                     <h5 className="phone-number-text">(203) 214-3282</h5>
@@ -60,6 +70,8 @@ function Header({handleClick}){
                     </div>
                 </div>
             </div>
+            <div className={isHome ? 'header-spacer' : ''}/>
+            <MissionStatement isHome={isHome}/>
 
         </header>
     )
