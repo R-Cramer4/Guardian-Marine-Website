@@ -142,7 +142,7 @@ div.p-computer img.photos{
 .service-card {
     width: 500px;
     height: 500px;
-    background-image: url("./assets/Photos/ships_wheel.png");
+    background-image: url("../assets/Photos/ships_wheel.png");
     background-size: contain;
     background-repeat: no-repeat;
     display: flex;

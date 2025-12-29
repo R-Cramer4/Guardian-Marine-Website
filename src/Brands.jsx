@@ -6,7 +6,7 @@ export default function Brands(){
         <div>
             <div className='brands-row'>
                 <div className='brands-col'>
-                    <img src='./assets/Photos/Brands/victron.png'/>
+                    <img src='./assets/Photos/Brands/Victron.png'/>
                     <img src='./assets/Photos/Brands/garmin.svg'/>
                     <img src='./assets/Photos/Brands/RaymarineLogo.png'/>
                     <img src='./assets/Photos/Brands/BG.png'/>

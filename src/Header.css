@@ -51,7 +51,7 @@
         rgba(var(--homeFade), 0) 0%, 
         rgba(var(--homeFade), 0.05) 65%, 
         rgba(var(--homeFade), 1) 100%),
-        url("./assets/Photos/main_img.png");
+        url("../assets/Photos/main_img.png");
     background-size: cover;
     height: 140vh;
 }
@@ -123,7 +123,7 @@
 .dropbtn{
     width: 50px;
     height: 50px;
-    background-image: url("assets/Photos/DropDown.png");
+    background-image: url("../assets/Photos/DropDown.png");
     background-size: 50px, 50px;
     background-color: var(--lightGrey);
     border: none;
