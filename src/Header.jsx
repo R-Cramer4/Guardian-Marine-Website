@@ -48,7 +48,7 @@ function Header({handleClick, isHome}){
             <div className="main-header">
                 <div className="left">
                     <a onClick={() => handleClick('home')}>
-                        <img src="./src/assets/Logo.png" alt="Logo" className = "logo"/>
+                        <img src="./assets/Logo.png" alt="Logo" className = "logo"/>
                     </a>
                     <h4 className='brand-text'>Guardian Marine</h4>
                 </div>

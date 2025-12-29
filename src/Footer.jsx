@@ -9,7 +9,7 @@ export default function Footer(){
         <div className="ft-left">
             <a href="https://abycinc.org/membership/member-directory/?id=34fc8c63-4175-49db-90a9-f2b9ed148d86"
                     >
-                <img src="./src/assets/Photos/Brands/ABYC logo.png" alt="ABYC Logo" className="logos"/>
+                <img src="./assets/Photos/Brands/ABYC logo.png" alt="ABYC Logo" className="logos"/>
             </a>
         </div>
         <div className="flex-item">
@@ -23,7 +23,7 @@ export default function Footer(){
 
         <div className="ft-right">
             <a href="https://web.nmea.org/Directory-Listing/Guardian-Marine-LLC-8887">
-                <img src="./src/assets/Photos/Brands/NMEA Logo.png" alt="NMEA Logo" className="logos"/>
+                <img src="./assets/Photos/Brands/NMEA Logo.png" alt="NMEA Logo" className="logos"/>
             </a>
         </div>
     </div>

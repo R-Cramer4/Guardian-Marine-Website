@@ -94,7 +94,7 @@ class ContactForm extends React.Component{
             return (
                 <>
                     <h3>Submission Success</h3>
-                    <img src="./src/assets/Photos/Logo-main.png" alt="logo" className="main-logo" onClick={() => this.handleClick('home')}/>
+                    <img src="./assets/Photos/Logo-main.png" alt="logo" className="main-logo" onClick={() => this.handleClick('home')}/>
                     <div className="spacer"></div>
                 </>
 

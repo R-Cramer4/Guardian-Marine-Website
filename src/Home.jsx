@@ -186,69 +186,69 @@ function getCur(ind, next){
 
 export default function Home({handleClick}){
     const images = [
-        './src/assets/Photos/Gallery/BatteryBefore.jpg',
-        './src/assets/Photos/Gallery/BatteryAfter.jpg',
-        './src/assets/Photos/Gallery/GarminCenterBefore.jpeg',
-        './src/assets/Photos/Gallery/GarminCenterAfter.jpeg',
-        './src/assets/Photos/Gallery/GarminLeftBefore.jpg',
-        './src/assets/Photos/Gallery/GarminLeftAfter.jpg',
-        './src/assets/Photos/Gallery/GarminRightBefore.jpg',
-        './src/assets/Photos/Gallery/GarminRightAfter.jpg',
-        './src/assets/Photos/Gallery/LowerPanelBackBefore.jpg',
-        './src/assets/Photos/Gallery/LowerPanelBackAfter.jpg',
-        './src/assets/Photos/Gallery/UpperPanelBefore.jpg',
-        './src/assets/Photos/Gallery/UpperPanelAfter.jpg',
-        './src/assets/Photos/Gallery/UpperPanelFrontBefore.jpg',
-        './src/assets/Photos/Gallery/UpperPanelFrontAfter.jpg',
+        './assets/Photos/Gallery/BatteryBefore.jpg',
+        './assets/Photos/Gallery/BatteryAfter.jpg',
+        './assets/Photos/Gallery/GarminCenterBefore.jpeg',
+        './assets/Photos/Gallery/GarminCenterAfter.jpeg',
+        './assets/Photos/Gallery/GarminLeftBefore.jpg',
+        './assets/Photos/Gallery/GarminLeftAfter.jpg',
+        './assets/Photos/Gallery/GarminRightBefore.jpg',
+        './assets/Photos/Gallery/GarminRightAfter.jpg',
+        './assets/Photos/Gallery/LowerPanelBackBefore.jpg',
+        './assets/Photos/Gallery/LowerPanelBackAfter.jpg',
+        './assets/Photos/Gallery/UpperPanelBefore.jpg',
+        './assets/Photos/Gallery/UpperPanelAfter.jpg',
+        './assets/Photos/Gallery/UpperPanelFrontBefore.jpg',
+        './assets/Photos/Gallery/UpperPanelFrontAfter.jpg',
     ]
     const brands = [
         {
-            image: "./src/assets/Photos/Brands/ABYCMasterTech.png",
+            image: "./assets/Photos/Brands/ABYCMasterTech.png",
             name: "ABYC logo",
             link: "https://abycinc.org/membership/member-directory/?id=34fc8c63-4175-49db-90a9-f2b9ed148d86"
         },
         {
-            image: "./src/assets/Photos/Brands/integrel_logo.png",
+            image: "./assets/Photos/Brands/integrel_logo.png",
             name: "integrel logo",
             link: "https://integrelsolutions.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/NMEA Logo.png",
+            image: "./assets/Photos/Brands/NMEA Logo.png",
             name: "NMEA logo",
             link: "https://web.nmea.org/Directory-Listing/Guardian-Marine-LLC-8887"
         },
         {
-            image: "./src/assets/Photos/Brands/Victron.png",
+            image: "./assets/Photos/Brands/Victron.png",
             name: "Victron logo",
             link: "https://www.victronenergy.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/garmin.svg",
+            image: "./assets/Photos/Brands/garmin.svg",
             name: "garmin logo",
             link: "https://www.garmin.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/RaymarineLogo.png",
+            image: "./assets/Photos/Brands/RaymarineLogo.png",
             name: "Raymarine logo",
             link: "https://www.raymarine.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/SleipnerLogo.svg",
+            image: "./assets/Photos/Brands/SleipnerLogo.svg",
             name: "Sleipner logo",
             link: "https://www.sleipnergroup.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/BG.png",
+            image: "./assets/Photos/Brands/BG.png",
             name: "B&G logo",
             link: "https://www.bandg.com/"
         },
         {
-            image: "./src/assets/Photos/Brands/czone.png",
+            image: "./assets/Photos/Brands/czone.png",
             name: "CZone logo",
             link: "https://czone.navico.com/marine/"
         },
         {
-            image: "./src/assets/Photos/Brands/mastervolt.png",
+            image: "./assets/Photos/Brands/mastervolt.png",
             name: "Mastervolt logo",
             link: "https://www.mastervolt.com/"
         },

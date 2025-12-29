@@ -4,28 +4,28 @@
             "name": "Electrical",
             "text": "With extensive field experience and training, the electrical systems on board is our specialty. Services from basic wiring to complete system upgrades is our brand. We at Guardian Marine follow electrical standards based on the renowned American Boat and Yacht Counsel (ABYC)",
             "photos": [
-                "./src/assets/Photos/Gallery/LowerPanelBackAfter.jpg"
+                "./assets/Photos/Gallery/LowerPanelBackAfter.jpg"
             ]
         },
         {
             "name": "Electronics",
             "text": "Guardian Marine provides installation of new, upgraded parts.",
             "photos": [
-                "./src/assets/Photos/Gallery/GarminLeftAfter.jpg"
+                "./assets/Photos/Gallery/GarminLeftAfter.jpg"
             ]
         },
         {
             "name": "System Integration",
             "text": "As well as installing new and upgraded parts, Guardian Marine also provides system integration services.",
             "photos": [
-                "./src/assets/Photos/Gallery/UpperPanelFrontAfter.jpg"
+                "./assets/Photos/Gallery/UpperPanelFrontAfter.jpg"
             ]
         },
         {
             "name": "Solar/Energy Systems",
             "text": "With new power designs on the market, Guardian Marine provides options to retrofit old, outdated systems.",
             "photos": [
-                "./src/assets/Photos/Gallery/SolarBoatAfter.jpg"
+                "./assets/Photos/Gallery/SolarBoatAfter.jpg"
             ]
         }
     ]

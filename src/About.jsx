@@ -7,7 +7,7 @@ export default function About(){
 
             <h3>About Us Page Under Construction</h3>
 
-            <img src="./src/assets/Photos/Logo-main.png" alt="logo" className="main-logo"/>
+            <img src="./assets/Photos/Logo-main.png" alt="logo" className="main-logo"/>
 
             <div className="spacer"></div>
         </main>
