@@ -49,7 +49,7 @@
     background-image:
         linear-gradient(180deg, 
         rgba(var(--homeFade), 0) 0%, 
-        rgba(var(--homeFade), 0.05) 65%, 
+        rgba(var(--homeFade), 0) 75%, 
         rgba(var(--homeFade), 1) 100%),
         url("../assets/Photos/main_img.png");
     background-size: cover;

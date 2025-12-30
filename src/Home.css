@@ -152,18 +152,18 @@ div.p-computer img.photos{
     align-items: center;
 }
 .service-animated {
-    animation: spin-background 1000ms linear;
+    animation: spin-background 500ms linear;
 }
 .text-animated {
-    animation: spin-text 1000ms linear;
+    animation: spin-text 500ms linear;
 }
 @keyframes spin-background {
     0%{ transform: rotate(0deg); }
-    100%{ transform: rotate(360deg); }
+    100%{ transform: rotate(180deg); }
 }
 @keyframes spin-text {
     0%{ transform: rotate(360deg); }
-    100%{ transform: rotate(0deg); }
+    100%{ transform: rotate(180deg); }
 }
 .more-info {
     background-color: #2a4675;
