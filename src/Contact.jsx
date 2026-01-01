@@ -1,169 +1,197 @@
 import './index.css'
 import './Contact.css'
-import React from 'react';
+import { useState } from 'react';
+import { Country, State, City } from 'country-state-city';
 
-
-
-class ContactForm extends React.Component{
-    constructor({handleClick}){
-        super();
-        this.handleClick = handleClick.bind(this);
-        this.state = {
-            FirstName: undefined,
-            LastName: undefined,
-            Email: undefined,
-            Number: undefined,
-            boatType: undefined,
-            Loc: undefined,
-            Request: undefined,
-            Time: true,
-            Submit: false,
-        }
-
-        this.HandleChange = this.HandleChange.bind(this);
-        this.submitForm = this.submitForm.bind(this);
-        this.validateForm = this.validateForm.bind(this);
-    }
-    HandleChange(e){
-        this.setState({[e.target.name]: e.target.value});
-    }
-
-    validateForm(){
-        if(this.state.FirstName == undefined || this.state.FirstName == "" ||
-            this.state.LastName == undefined || this.state.LastName == "" ||
-            this.state.Email == undefined || this.state.Email == "" ||
-            this.state.Number == undefined || this.state.Number == "" ||
-            this.state.boatType == undefined || this.state.boatType == "" ||
-            this.state.Loc == undefined || this.state.Loc == "") return false;
-
-        if(!this.state.Email.includes('@') || !this.state.Email.includes('.')) return false;
-        if(this.state.Number.length < 10) return false;
-
-        return true;
-    }
-
-
-    submitForm(e){
-        e.preventDefault();
-        if(!this.validateForm()) return; 
-        if(!this.state.Time) return;
-
-        // basin form submission
-        const xhr = new XMLHttpRequest();
-        var formData = new FormData();
-        formData.append("firstName", this.state.FirstName);
-        formData.append("lastName", this.state.LastName);
-        formData.append("email", this.state.Email);
-        formData.append("phoneNumber", this.state.Number);
-        formData.append("boatType", this.state.boatType);
-        formData.append("location", this.state.Loc);
-        formData.append("WorkRequest", this.state.Request);
-        
-        xhr.open("POST", "https://usebasin.com/f/66616079d131", true);
-        xhr.send(formData);
-        xhr.onload = function(e){
-            if(xhr.status === 200){
-                console.log("Success");
-                timeOfSubmit = new Date();
-                window.location.href = "submitSuccess.html";
-            }else{
-                console.log("An Error Occured");
-                console.log(xhr.statusText);
-            }
-        };
-
-        // handle submission
-        console.log("submitted");
-        this.setState({
-            FirstName: "",
-            LastName: "",
-            Email: "",
-            Number: "",
-            boatType: "",
-            Loc: "",
-            Request: "",
-            Time: false,
-            Submit: true,
-        })
-        this.timer = setTimeout(() => {
-            this.setState({Time: true});
-        },60000);
-    }
-    render(){
-        if(this.state.Submit == true){
-            return (
-                <>
-                    <h3>Submission Success</h3>
-                    <img src="./assets/Photos/Logo-main.png" alt="logo" className="main-logo" onClick={() => this.handleClick('home')}/>
-                    <div className="spacer"></div>
-                </>
-
-            )
-        }
+function RequiredComponent({data, name}) {
+    if (data === undefined) return null;
+    if (data === "") {
         return (
-            <>
-                <h3>Work Form</h3>
-                <div className="formContainer">
-                    <form className="work-form" onSubmit={this.submitForm}>
-                        <div className="name-group">
-                            <div className="name">
-                                <label>First Name</label>
-                                <input type="text" name="FirstName" value={this.state.FirstName} onChange={this.HandleChange}/>
-                                {(this.state.FirstName != undefined && this.state.FirstName == "" )&&
-                                    <div className="errorMessage" id="emptyFirstName">This is a required field</div>}
-                            </div>
-                            <div className="name">
-                                <label >Last Name</label>
-                                <input type="text" name="LastName" value={this.state.LastName} onChange={this.HandleChange}/>
-                                {(this.state.LastName != undefined && this.state.LastName == "") && 
-                                    <div className="errorMessage" id="emptyLastName">This is a required field</div>}
-                            </div>
-                        </div>
-                        <div className="form-group">
-                            <label>Email</label>
-                            <input type='text' name="Email" value={this.state.Email} onChange={this.HandleChange}/>
-                            {(this.state.Email != undefined && this.state.Email == "") && 
-                                <div className="errorMessage" id="emptyEmail">This is a required field</div>}
-                            {(this.state.Email != undefined && this.state.Email != "" && (!this.state.Email.includes('@') || !this.state.Email.includes('.') )) && 
-                                <div className="errorMessage" id="invalidEmail">Please enter a valid email</div>}
-                        </div>
-                        <div className="form-group">
-                            <label>Phone Number</label>
-                            <input type='tel' name='Number' value={this.state.Number} onChange={this.HandleChange}/>
-                            {(this.state.Number != undefined && this.state.Number == "") && 
-                                <div className="errorMessage" id="emptyPhoneNumber">This is a required field</div>}
-                            {(this.state.Number != undefined && this.state.Number != "" && this.state.Number.length < 10) && 
-                                <div className="errorMessage" id="invalidPhoneNumber">Please enter a valid phone number</div>}
-                        </div>
-                        <div className="form-group">
-                            <label>Make and Model</label>
-                            <input type="text" name="boatType" value={this.state.boatType} onChange={this.HandleChange}/> 
-                            {(this.state.boatType != undefined && this.state.boatType == "") && 
-                                <div className="errorMessage" id="emptyBoatType">This is a required field</div>}
-                        </div>
-                        <div className="form-group">
-                            <label>Boat Location</label>
-                            <input type="text" name="Loc" value={this.state.Loc} onChange={this.HandleChange}/>
-                            {(this.state.Loc != undefined && this.state.Loc == "") && 
-                                <div className="errorMessage" id="emptyLocation">This is a required field</div>}
-                        </div>
-                        <div className="form-group">
-                            <label>Work Request</label>
-                            <textarea name="Request" cols="30" rows="10" value={this.state.Request} onChange={this.HandleChange}></textarea>
-                        </div>
-                        <button type="submit" id="submit">Submit</button>
-                        {!this.state.Time && <div className="errorMessage" id="needToWait">You need to wait 1 minute in between submissions</div>}
-                    </form>
-                </div>
-            </>
-        )
-    }
+            <div className="errorMessage" name={"empty" + name}>This is a required field</div>
+        );
+    } 
+    return null;
 }
 
-export default function Contact({handleClick}){
+function ContactForm() {
+    const [submitStatus, setSubmitStatus] = useState(0);
+    const [formData, setFormData] = useState({
+        firstName: undefined,
+        lastName: undefined,
+        email: undefined,
+        phoneNumber: undefined,
+        state: undefined,
+        city: undefined,
+        boatType: undefined,
+        work: undefined,
+    });
+
+    const handleChange = e => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const validateAndSubmit = e => {
+        e.preventDefault();
+
+        // I don't like this
+        setFormData(currentData => {
+            var newData = Object.fromEntries(
+                Object.entries(currentData).map(([key, val]) => [key, (val ?? '').trim()])
+            );
+
+            if (!Object.values(newData).some(value => value === "")) {
+                // all values are good
+                // basin form submission
+                const xhr = new XMLHttpRequest();
+                var formData = new FormData();
+                formData.append("firstName", newData.firstName);
+                formData.append("lastName", newData.lastName);
+                formData.append("email", newData.email);
+                formData.append("phoneNumber", newData.phoneNumber);
+                formData.append("boatType", newData.boatType);
+                formData.append("state", newData.state);
+                formData.append("city", newData.city);
+                formData.append("WorkRequest", newData.work);
+
+                xhr.open("POST", "https://usebasin.com/f/66616079d131", true);
+                xhr.send(formData);
+                xhr.onload = function(){
+                    if(xhr.status === 200){
+                        console.log("Success");
+                        // handle submit redirect
+                        setSubmitStatus(200);
+                        setTimeout(() => {
+                            window.location.href = '/';
+                        }, 2000);
+                    }else{
+                        setSubmitStatus(xhr.status);
+                        console.log("An Error Occured");
+                        console.log(xhr.statusText);
+                    }
+                };
+                window.scrollTo(0, 0);
+            }
+
+            return newData;
+        });
+    }
+
+    return (
+        <div className='formContainer'>
+            <h3>Work Form</h3>
+            <form className="work-form" onSubmit={validateAndSubmit}>
+                {submitStatus === 200 && (
+                    <div className='success-message'>
+                        Form submitted successfully! Redirecting to homepage...
+                    </div>
+                )}
+                {submitStatus != 200 && submitStatus != 0 && (
+                    <div className='submit-error'>
+                        Form submission error with code {submitStatus} <br/>
+                        Please try again or email your request to service@guardianmarinect.com
+                    </div>
+                )}
+                <div className="name-group">
+                    <div className="name">
+                        <label>First Name</label>
+                        <input 
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName || ''}
+                            onChange={handleChange}/>
+                        <RequiredComponent data={formData.firstName} name={"FirstName"} />
+                    </div>
+                    <div className="name">
+                        <label>Last Name</label>
+                        <input 
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName || ''}
+                            onChange={handleChange}/>
+                        <RequiredComponent data={formData.lastName} name={"LastName"} />
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label>Email</label>
+                    <input 
+                        type="email"
+                        name="email"
+                        value={formData.email || ''}
+                        onChange={handleChange}/>
+                    <RequiredComponent data={formData.email} name={"email"} />
+                </div>
+                <div className="form-group">
+                    <label>Phone Number</label>
+                    <input 
+                        type="tel"
+                        name="phoneNumber"
+                        value={formData.phoneNumber || ''}
+                        onChange={handleChange}/>
+                    <RequiredComponent data={formData.phoneNumber} name={"Number"} />
+                </div>
+                <div className="form-group">
+                    <label>Make and Model</label>
+                    <input 
+                        type="text"
+                        name="boatType"
+                        value={formData.boatType || ''}
+                        onChange={handleChange}/>
+                    <RequiredComponent data={formData.boatType} name={"BoatType"} />
+                </div>
+                <div className="name-group">
+                    <div className="name">
+                        <label>State</label>
+                        <select
+                            type="text"
+                            name="state"
+                            value={formData.state || ''}
+                            onChange={handleChange}>
+                            <option value=""> Select a state</option>
+                            {State.getStatesOfCountry("US").map(state => (
+                                <option key={state.isoCode} value={state.isoCode}>{state.name}</option>
+                            ))}
+                        </select>
+                        <RequiredComponent data={formData.state} name={"State"} />
+                    </div>
+                    <div className="name">
+                        <label>City</label>
+                        <select
+                            type="text"
+                            name="city"
+                            value={formData.city || ''}
+                            onChange={handleChange}>
+                            <option value=""> Select a city</option>
+                            {City.getCitiesOfState("US", formData.state).map(city => (
+                                <option key={city.name} value={city.name}>{city.name}</option>
+                            ))}
+                        </select>
+                        <RequiredComponent data={formData.city} name={"City"} />
+                    </div>
+                </div>
+                <div className="form-group">
+                    <label>Work Request</label>
+                    <textarea
+                        name="work"
+                        cols="30"
+                        rows="10"
+                        value={formData.work || ''}
+                        onChange={handleChange}/>
+                    <RequiredComponent data={formData.work} name={"Request"} />
+                </div>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    )
+}
+
+export default function Contact(){
     return (
         <main className = "light-theme">
-                <ContactForm handleClick={handleClick} />
+            <ContactForm/>
         </main>
     )
 }

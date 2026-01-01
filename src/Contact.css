@@ -26,7 +26,10 @@
     align-items: center;
     flex-direction: column;
 }
-.form-group input, .form-group textarea, .name-group input{
+.form-group input,
+.form-group textarea,
+.name-group input{
+    width: 100%;
     font-size: 24px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -35,8 +38,11 @@
     background-color: #fbfcff;
     margin-top: 5px;
     font-family: inherit;
+    box-sizing: border-box;
 }
 .name{
+    flex: 1;
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -61,12 +67,53 @@ button[type="submit"]{
 button[type="submit"]:hover{
     background-color: rgba(140, 140, 145, .599);
 }
+select {
+    width: 100%;
+    font-size: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 1px solid rgba(100, 100, 128, .6);
+    border-radius: 5px;
+    background-color: #fbfcff;
+    margin-top: 5px;
+    font-family: inherit;
+}
 .errorMessage{
     margin-top: 5px;
     font-size: 16px;
     color: red;
 }
-@media screen and (max-width: 750px){
+.success-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+.submit-error {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    text-align: center;
+}
+@media screen and (min-width: 800px){
+    .name {
+        max-width: 100%;
+    }
+    .work-form{
+        width: 45vw;
+    }
+}
+@media screen and (max-width: 800px){
+    .name {
+        width: 100%;
+        max-width: 100%;
+    }
     .name-group{
         flex-direction: column;
     }
