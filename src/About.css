@@ -1,0 +1,218 @@
+@media screen and (min-width: 1000px) {
+    .services {
+        display: flex;
+        flex-direction: row;
+        gap: 1vw;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .services {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+.about-holder {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+h1.about-text {
+    color: #2a4675;
+    margin-bottom: 0px;
+}
+p.about-text {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    margin-top: 10px;
+}
+.story-holder {
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+.story {
+    margin: 20px;
+    color: #020210;
+}
+.content-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 2vh;
+}
+.service-holder {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.3);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.services {
+    width: 100%;
+    margin-top: 30px;
+}
+.service-header {
+    font: bold;
+    font-size: 30px;
+    padding: 10px;
+    padding-top: 20px;
+    padding-left: 10%;
+    width: 100%;
+    margin: 0;
+}
+.service-list-item {
+    list-style: disc outside;
+}
+.service-list {
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.values-holder {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.values-text-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h2.values-text {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2a4675;
+}
+h3.values-text {
+    font-size: 25px;
+    color: #2a4675;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+}
+p.values-text {
+    margin-top: 0px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.6);
+    width: 80%;
+}
+
+h2.standards-text {
+    font-size: 35px;
+    font-weight: bold;
+    color: #2a4675;
+}
+h3.standards-text {
+    font-size: 20px;
+    color: #2a4675;
+    margin-bottom: 5px;
+    padding-bottom: 0px;
+    align-self: self-start;
+    margin-left: 10px;
+}
+p.standards-text {
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.6);
+    width: 90%;
+}
+
+.standards-holder {
+    width: 100%;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.standards {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: left;
+    text-align: left;
+    width: 100%;
+    margin-left: 20px;
+}
+.contact-holder {
+    width: 100%;
+    background-color: #2a4675;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+h2.contact-text {
+    font-size: 35px;
+}
+p.contact-text {
+    font-size: 20px;
+    align-self: center;
+    width: 90%;
+}
+.contact-button-holder {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    width: 80%;
+}
+.contact {
+    margin: 10px;
+    font-size: 20px;
+    width: 40%;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+@media screen and (max-width: 1000px) {
+    .contact-button-holder {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contact {
+        width: 100%;
+    }
+}
+button.contact {
+    background-color: transparent;
+    border-radius: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    color: white;
+}
+button.contact:hover {
+    background-color: white;
+    color: #2a4675;
+}
+a.contact {
+    background-color: white;
+    color: #2a4675;
+    border-radius: 10px;
+    padding: 10px;
+
+}
