@@ -1,7 +1,7 @@
 import './index.css'
 import './Contact.css'
 import { useState } from 'react';
-import { Country, State, City } from 'country-state-city';
+import { State, City } from 'country-state-city';
 
 function RequiredComponent({data, name}) {
     if (data === undefined) return null;

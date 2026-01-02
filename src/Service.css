@@ -1,9 +1,24 @@
+.react-multi-carousel-item {
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: 5px;
+}
+.react-multi-carousel-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .services-holder{
     margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
+}
+.carousel-holder {
+    width: 90%;
 }
 .service-p{
     background-color: white;
@@ -42,8 +57,8 @@ h3.wo-content{
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
 }
 .active-drop{
     height: auto;
@@ -56,6 +71,7 @@ h3.wo-content{
     margin: 10px;
 }
 .service-text{
+    width: 70%;
     margin: 10px;
     font-size: calc(15px + 1vw);
 }
@@ -64,7 +80,19 @@ h3.wo-content{
         flex-direction: column;
     }
     .service-img{
-        width: 40vw;
+        width: 60vw;
         height: auto;
+    }
+    .service-text {
+        width: 90%;
+    }
+    .react-multi-carousel-track {
+        height: 40vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .react-multi-carousel-item {
+        height: 100%;
+        width: 100%;
     }
 }
