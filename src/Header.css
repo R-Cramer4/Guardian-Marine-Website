@@ -28,9 +28,16 @@
     }
     .header-home {
         background-position-x: center;
+        background-image:
+            linear-gradient(180deg, 
+            rgba(var(--homeFade), 0) 0%, 
+            rgba(var(--homeFade), 0) 75%, 
+            rgba(var(--homeFade), 1) 95%),
+            url("../assets/Photos/main_img.png");
     }
     header {
-        min-height: 25vh;
+        min-height: 30vh;
+        background-position-y: 40px;
     }
     .phone-number{
         width: 100%;
@@ -65,14 +72,16 @@
         padding-right: 10%;
         justify-content: right;
     }
+    .header-home {
+        background-image:
+            linear-gradient(180deg, 
+            rgba(var(--homeFade), 0) 0%, 
+            rgba(var(--homeFade), 0) 75%, 
+            rgba(var(--homeFade), 1) 100%),
+            url("../assets/Photos/main_img.png");
+    }
 }
 .header-home {
-    background-image:
-        linear-gradient(180deg, 
-        rgba(var(--homeFade), 0) 0%, 
-        rgba(var(--homeFade), 0) 75%, 
-        rgba(var(--homeFade), 1) 100%),
-        url("../assets/Photos/main_img.png");
     background-size: cover;
     height: 140vh;
 }

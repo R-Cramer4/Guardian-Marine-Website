@@ -76,8 +76,9 @@ function DropContent({text, show}){
 
 
 export default function Service({index}){
-    let initState = [-1, -1, -1, -1];
+    let initState = [0, 1, 2, 3];
     if (index != -1) {
+        initState = [-1, -1, -1, -1];
         initState[index] = index;
     }
     const [show, setShow] = useState(initState);
